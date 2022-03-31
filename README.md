@@ -13,6 +13,7 @@ If you have any question please start a new Issue on github or contact me via an
 
 # Desktop file
 Create a file: sudo nano /user/share/appilications/meshcentral.desktop
+Move the meshcentral.png to your Pictures folder
 Add content below:
 
 [Desktop Entry]\
@@ -22,6 +23,6 @@ Type=Application\
 Terminal=false\
 Exec=/path/to/MeshCentral.jar\
 Name=MeshCentral\
-Icon=/path/to/image if you have one
+Icon=/home/$USER/Pictures/meshcentral.png
 
 You may need to log out and back in for it to work.
