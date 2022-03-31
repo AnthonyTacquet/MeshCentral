@@ -12,7 +12,7 @@ You might need to give the file excecute permissions: sudo chmod 775 MeshCentral
 If you have any question please start a new Issue on github or contact me via anthony.tacquet@gmail.com
 
 # Desktop file
-Create a file: sudo nano /user/share/appilications/MeshCentral.Desktop
+Create a file: sudo nano /user/share/appilications/meshcentral.desktop
 Add content below:
 
 [Desktop Entry]\
