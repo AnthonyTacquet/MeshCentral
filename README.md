@@ -13,13 +13,13 @@ If you have any question please start a new Issue on github or contact me via an
 # Desktop file
 Fill in this file and add it to ~/.local/share/applications/ or /usr/share/applications/
 
-[Desktop Entry]
-Encoding=UTF-8
-Version=1.0
-Type=Application
-Terminal=false
-Exec=/path/to/Runner.java
-Name=MeshCentral
+[Desktop Entry]\
+Encoding=UTF-8\
+Version=1.0\
+Type=Application\
+Terminal=false\
+Exec=/path/to/Runner.java\
+Name=MeshCentral\
 Icon=/path/to/images-folder
 
 You may need to log out and back in for it to work.
