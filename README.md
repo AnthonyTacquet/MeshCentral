@@ -20,6 +20,6 @@ Type=Application\
 Terminal=false\
 Exec=/path/to/Runner.java\
 Name=MeshCentral\
-Icon=/path/to/images-folder\
+Icon=/path/to/images-folder
 
 You may need to log out and back in for it to work.
