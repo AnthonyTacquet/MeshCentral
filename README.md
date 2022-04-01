@@ -7,9 +7,10 @@ Make sure you have the latest java installer installed (openJDK).
 ## Ubuntu
 sudo apt install git
 sudo apt install openjdk-13-jdk
-
-
-
+\
+\
+\
+\
 Copy the folder Meshcentral/ to /home/$USER/
 So you would get /home/$USER/MeshCentral/data/...
 
