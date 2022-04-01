@@ -10,7 +10,6 @@ sudo apt install openjdk-13-jdk
 \
 \
 \
-\
 Copy the folder Meshcentral/ to /home/$USER/
 So you would get /home/$USER/MeshCentral/data/...
 
