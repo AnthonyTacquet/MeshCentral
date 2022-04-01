@@ -3,8 +3,14 @@ This is my gui for MeshCentral tested on a ubuntu based system.
 
 # Install
 Make sure you have the latest java installer installed (openJDK).
+
+## Ubuntu
+sudo apt install git
+sudo apt install openjdk-13-jdk
+
 Copy the folder Meshcentral/ to /home/$USER/
-So you would get /home/$USER/MeshCentral/...
+So you would get /home/$USER/MeshCentral/data/...
+
 When ready run the .jar file.
 You might need to give the file excecute permissions: sudo chmod 775 MeshCentral.jar
 
