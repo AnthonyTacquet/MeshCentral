@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MeshCentral:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MeshCentral_jar</output-path>
+    <root id="archive" name="MeshCentral.jar">
+      <element id="module-output" name="MeshCentral" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
