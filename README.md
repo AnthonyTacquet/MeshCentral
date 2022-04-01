@@ -5,7 +5,7 @@ This is my gui for MeshCentral tested on a ubuntu based system.
 Make sure you have the latest java installer installed (openJDK).
 
 ## Ubuntu
-sudo apt install git
+sudo apt install git\
 sudo apt install openjdk-13-jdk
 \
 \
