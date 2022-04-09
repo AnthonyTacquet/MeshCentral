@@ -48,19 +48,19 @@ Command to run the jar file:
 If you have any question please start a new Issue on github or contact me via anthony.tacquet@gmail.com
 
 # Desktop file
-Create a file: sudo nano /user/share/appilications/meshcentral.desktop
+Create a file: ```sudo nano /user/share/appilications/meshcentral.desktop```\
 Move the meshcentral.png to your Pictures folder
 Add content below:
-
-[Desktop Entry]\
-Encoding=UTF-8\
-Version=1.0\
-Type=Application\
-Terminal=false\
-Exec=/path/to/MeshCentral.jar\
-Name=MeshCentral\
+```
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/path/to/MeshCentral.jar
+Name=MeshCentral
 Icon=/home/$USER/Pictures/meshcentral.png
-
+```
 You may need to log out and back in for it to work.
 
 # myCode folder
