@@ -23,7 +23,7 @@ You might need to give the file excecute permissions: sudo chmod +x MeshCentral.
 Command to run the jar file:
 - First check if openjdk is installed with: ```java -version```
 - Then run the MeshCentral.jar file: ```java -jar MeshCentral.jar```
-\
+
 ## Fedora && Red Hat
 ```
 sudo dnf update
@@ -42,14 +42,14 @@ You might need to give the file excecute permissions: sudo chmod +x MeshCentral.
 Command to run the jar file:
 - First check if openjdk is installed with: ```java -version```
 - Then run the MeshCentral.jar file: ```java -jar MeshCentral.jar```
-\
 
 # Questions
 If you have any question please start a new Issue on github or contact me via anthony.tacquet@gmail.com
 
 # Desktop file
 Create a file: ```sudo nano /user/share/appilications/meshcentral.desktop```\
-Move the meshcentral.png to your Pictures folder
+Move the meshcentral.png to your Pictures folder.\
+```mv ./MeshCentral/meshcentral.png /home/$USER/Pictures/```
 Add content below:
 ```
 [Desktop Entry]
