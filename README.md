@@ -64,4 +64,4 @@ Icon=/home/$USER/Pictures/meshcentral.png
 You may need to log out and back in for it to work.
 
 # myCode folder
-Can be removed, this is only for people who are interested in the code.
+Can be removed, this is only for people who are interested in my code.
