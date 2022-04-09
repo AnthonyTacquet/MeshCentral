@@ -1,17 +1,16 @@
 # MeshCentral
 This is my gui for MeshCentral tested on a ubuntu based system.
-
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 # Install
 Make sure you have the latest java installer installed (openJDK).
 
 ## Ubuntu && Debian
 ```
+sudo apt update\
 sudo apt install git\
 sudo apt install openjdk-13-jdk
 ```
-\
-\
 \
 Copy the folder MeshCentral/ to /home/$USER/
 ```
@@ -27,12 +26,10 @@ Command to run the jar file:
 \
 ## Fedora && Red Hat
 ```
-sudo dnf update
+sudo dnf update\
 sudo dnf install git\
 sudo dnf install java-latest-openjdk.x86_64
 ```
-\
-\
 \
 Copy the folder MeshCentral/ to /home/$USER/
 ```
