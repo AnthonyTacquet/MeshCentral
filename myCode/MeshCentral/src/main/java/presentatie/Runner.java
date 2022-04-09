@@ -1,20 +1,16 @@
 package presentatie;
 
-import logica.connect;
-import logica.createFile;
-import logica.readFile;
-import logica.removeFile;
+import logica.*;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.logging.Logger;
 
 
 /**
@@ -53,11 +49,16 @@ public class Runner {
     private JTextField serverUrlText;
     private JButton disconnectButton;
     private JTextField error;
+    private JButton surf;
+
+    private int activePort = 0;
+    private boolean connection = false;
 
 
     public Runner(){
         error.setEditable(false);
         error.setBorder(new LineBorder(Color.red, 1));
+        error.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         remoteTargetText.setText("null");
         debugLevelText.setText("0");
@@ -88,10 +89,12 @@ public class Runner {
             public void actionPerformed(ActionEvent e) {
                 if (!Existing.getSelectedItem().equals("none")){
                     readFile readFile = new readFile(Existing.getSelectedItem().toString());
+                    activePort = Integer.parseInt(localPortText.getText());
 
                     error.setForeground(Color.GREEN);
                     error.setBorder(new LineBorder(Color.green, 1));
-                    error.setText("Connection is established!!!");
+                    error.setText("Connection is established, surf to 127.0.0.1:" + activePort + "!!!");
+                    connection = true;
                     connect.connect(Existing.getSelectedItem().toString());
                 } else {
                     if (localPortText.getText().isEmpty() || remoteNameText.getText().isEmpty() || remoteNodeIdText.getText().isEmpty() || remoteTargetText.getText().isEmpty() || remotePortText.getText().isEmpty() || usernameText.getText().isEmpty() || passwordText.getText().isEmpty() || serverIdText.getText().isEmpty() || serverHttpsHashText.getText().isEmpty() || debugLevelText.getText().isEmpty() || serverUrlText.getText().isEmpty()){
@@ -100,11 +103,13 @@ public class Runner {
                     }
                     try {
                         createFile file = new createFile(Integer.parseInt(localPortText.getText()), remoteNameText.getText(), remoteNodeIdText.getText(), remoteTargetText.getText(), Integer.parseInt(remotePortText.getText()), usernameText.getText(), passwordText.getText(), serverIdText.getText(), serverHttpsHashText.getText(), Integer.parseInt(debugLevelText.getText()), serverUrlText.getText());
-                            file.setName("temp");
-                            file.generate();
-                            connect.connect("temp");
-                            error.setForeground(Color.GREEN);
-                            error.setText("Connection is established!!!");
+                        file.setName("temp");
+                        file.generate();
+                        activePort = Integer.parseInt(localPortText.getText());
+                        connect.connect("temp");
+                        error.setForeground(Color.GREEN);
+                        error.setText("Connection is established, surf to 127.0.0.1:" + activePort + "!!!");
+                        connection = true;
                     } catch (Exception exception){
                         error.setText("Error: " + exception.getMessage());
                         return;
@@ -120,6 +125,7 @@ public class Runner {
                 error.setForeground(Color.red);
                 error.setBorder(new LineBorder(Color.red, 1));
                 error.setText("Connection is disabled!!!");
+                connection = false;
             }
         });
 
@@ -194,6 +200,31 @@ public class Runner {
                 } catch (Exception exception){
                     error.setText("Error: " + exception.getMessage());
                 }
+            }
+        });
+        surf.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (connection){
+                    try{
+                        Thread.sleep(500);
+                        String url = "127.0.0.1:" + activePort;
+                        openBrowser.openURL(url);
+                    } catch (Exception exception){
+                        error.setForeground(Color.RED);
+                        error.setText("Error: " + exception.getMessage());
+                        System.out.println("Error: " + exception.getMessage());
+                    }
+                } else {
+                    error.setForeground(Color.RED);
+                    error.setText("Error: no connection has been started yet!!!");
+                }
+            }
+        });
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                connect.destroy();
+                connection = false;
             }
         });
     }
