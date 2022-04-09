@@ -3,7 +3,6 @@ This is my gui for MeshCentral tested on a ubuntu based system.
 ![alt text](https://github.com/AnthonyTacquet/MeshCentral/blob/master/Screen.png?raw=true "Screenshot")
 
 # Install
-Make sure you have the latest java installer installed (openJDK).
 
 ## Ubuntu && Debian
 ```
