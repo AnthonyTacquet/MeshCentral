@@ -13,7 +13,7 @@ sudo apt install openjdk-13-jdk
 \
 Copy the folder MeshCentral/ to /home/$USER/
 ```
-cd MeshCentral; sudo cp ./Meshcentral /home/$USER/
+cd MeshCentral; sudo cp ./Meshcentral/MeshCentral /home/$USER/
 ```
 So you would get /home/$USER/MeshCentral/data/...
 
@@ -32,7 +32,7 @@ sudo dnf install java-latest-openjdk.x86_64
 \
 Copy the folder MeshCentral/ to /home/$USER/
 ```
-cd MeshCentral; sudo cp ./Meshcentral /home/$USER/
+cd MeshCentral; sudo cp ./Meshcentral/MeshCentral /home/$USER/
 ```
 So you would get /home/$USER/MeshCentral/data/...
 
