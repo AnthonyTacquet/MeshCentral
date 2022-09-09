@@ -50,6 +50,7 @@ public class Runner {
     private JButton disconnectButton;
     private JTextField error;
     private JButton surf;
+    private JTextField tokenText;
 
     private int activePort = 0;
     private boolean connection = false;
@@ -106,7 +107,11 @@ public class Runner {
                         file.setName("temp");
                         file.generate();
                         activePort = Integer.parseInt(localPortText.getText());
-                        connect.connect("temp");
+                        if (tokenText.getText().length() == 0){
+                            connect.connect("temp");
+                        } else{
+                            connect.connect("temp", tokenText.getText());
+                        }
                         error.setForeground(Color.GREEN);
                         error.setText("Connection is established, surf to 127.0.0.1:" + activePort + "!!!");
                         connection = true;
@@ -157,6 +162,7 @@ public class Runner {
                     serverHttpsHashText.setText("");
                     debugLevelText.setText("");
                     serverUrlText.setText("");
+                    tokenText.setText("");
                 }
 
             }

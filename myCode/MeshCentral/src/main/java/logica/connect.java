@@ -18,6 +18,15 @@ public class connect {
         }
     }
 
+    public void connect(String name, String code){
+        String s;
+        try {
+            Process process = new ProcessBuilder("./MeshCentral/meshcmd", "--actionfile", "MeshCentral/data/" + name, "--token " + code).start();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public void destroy(){
         String pid = "";
         String s;
